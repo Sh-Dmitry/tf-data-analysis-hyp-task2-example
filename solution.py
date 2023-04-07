@@ -8,7 +8,7 @@ def solution(x: np.array, y: np.array) -> bool:
     p = 0.02
     res = ks_2samp(x, y)
     pval = res[1]
-    if pval >= p:
+    if pval > p:
         return False
     else:
         return True
