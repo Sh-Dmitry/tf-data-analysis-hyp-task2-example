@@ -10,5 +10,5 @@ def solution(x: np.array, y: np.array) -> bool:
     p = 0.02
     test_stat, _ , p_value = anderson_ksamp([x, y])
   
-    return p_value < p:
+    return p_value < p
       
