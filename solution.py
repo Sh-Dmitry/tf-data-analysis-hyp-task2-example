@@ -8,9 +8,7 @@ chat_id = 285100540 # Ваш chat ID, не меняйте название пе�
 
 def solution(x: np.array, y: np.array) -> bool:
     p = 0.02
-    res = cramervonmises_2samp(sample1, sample2)
-    pval = res.pvalue
-    if pval >= p:
-        return False
-    else:
-        return True
+    test_stat, _ , p_value = anderson_ksamp([x, y])
+  
+    return p_value < p:
+      
